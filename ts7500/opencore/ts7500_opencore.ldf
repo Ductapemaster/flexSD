@@ -4,7 +4,6 @@
     <Implementation title="opencore" dir="" description="ts7500_opencore" default_strategy="ts7500strategy">
         <Options>
             <Option name="HDL type" value="Verilog"/>
-            <Option name="def_top" value="ts7500_top"/>
             <Option name="top" value="ts7500_top"/>
         </Options>
         <Source name="wb_memwindow.v" type="Verilog">

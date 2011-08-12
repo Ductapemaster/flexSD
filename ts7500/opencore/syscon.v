@@ -137,7 +137,9 @@ module syscon(
   mode3_i,
   pllphase_o,
   can_enable_o,
-  can_wbaccess_i
+  can_wbaccess_i,
+  
+  speed_ctr
 );
 
 input wb_clk_i, wb_rst_i, wb_cyc_i, wb_stb_i, wb_we_i;
@@ -162,6 +164,10 @@ output cpu_uart_rxd_o;
 output [4:0] pllphase_o;
 output can_enable_o;
 input can_wbaccess_i;
+
+///
+input [31:0] speed_ctr;
+///
 
 parameter wdog_default = 2;
 parameter can_opt = 0;
@@ -357,6 +363,8 @@ always @(*) begin
   end
   5'h16: wb_dat = {{4{1'bx}}, can_enable, pllphase, mode3_i, resetsw_en,
     scratch, mode2_i, mode1_i};
+  5'h1c: wb_dat = speed_ctr[15:0];
+  5'h1e: wb_dat = speed_ctr[31:16];
   endcase
 end
 

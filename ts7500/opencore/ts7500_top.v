@@ -680,8 +680,18 @@ syscon #(
   .pllphase_o(pllphase),
   .internal_osc_o(internal_osc),
   .can_wbaccess_i(can_wbaccess),
-  .can_enable_o(can_enable)
+  .can_enable_o(can_enable),
+  
+  .speed_ctr(speed_ctr)
 );
+
+reg [31:0] speed_ctr;
+
+always@(posedge fpga_25mhz_pad) begin
+	
+	speed_ctr <= speed_ctr + 1;
+	
+end
 
 
 /****************************************************************************
