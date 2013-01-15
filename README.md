@@ -1,4 +1,4 @@
-<center><img src="https://raw.github.com/Ductapemaster/flexSD/master/img/flexSD_logo_tagline.png" width="275" height="100"></center>
+<center><img src="https://raw.github.com/Ductapemaster/flexSD/master/img/flexSD_logo_tagline.png" width="240" height="102"></center>
 
 Open source, flexible signal processing platform based on sigma delta processing techniques
 
