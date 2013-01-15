@@ -1,5 +1,5 @@
 # flexSD #
-![flexSD Logo](http://github.com/Ductapemaster/flexSD/raw/master/img/flexSD_logo_small.jpg)
+![flexSD Logo](https://raw.github.com/Ductapemaster/flexSD/master/img/flexSD_logo_small.png)
 
 Open source, flexible signal processing platform based on sigma delta processing techniques
 
